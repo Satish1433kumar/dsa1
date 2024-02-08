@@ -130,7 +130,7 @@ public class LinkedList {
         return true;
     }
 
-    // 11) Remove loop in a linkedlist
+    // 11) Remove loop in a linkedlisttttttttt
     public static void removeLoop() {
         Node  slow = head;
         Node  fast = head;
