@@ -12,7 +12,7 @@
 // 12) AddTwoNumbners in a linkedlist
 // 13) Delete nth element from  Last in Linked list
 // 14) Reverse a linked list
-// 15) 
+// 15)  Even and odd segregation in linkedlist
 
 public class LinkedList {
     static class Node { 
@@ -36,6 +36,9 @@ public class LinkedList {
     //2) Add element at begininning of the linkedlist
     public static void addFirst(int data) {
         Node newNode = new Node(data);
+        if(head == null){
+            head = newNode;
+            return;        }
         newNode.next=head;
         head=newNode;
     }
@@ -201,20 +204,47 @@ public class LinkedList {
         head = prev;
     }
 
+    // 15)  Even and odd segregation in linkedlist
+    public static Node evenOddSegregate(){
+        Node evenHead = new Node(-1);
+        Node oddHead = new Node(-1);
+        Node even = evenHead;
+        Node odd = oddHead;
+        Node temp = head;
+        int index = 0;
+        while(temp!=null){
+            if(index%2==0){
+                even.next = temp;
+                even = even.next;
+            }
+            else{
+                odd.next = temp;
+                odd = odd.next;
+            }
+            index++;
+            temp = temp.next;
+        }
+        // even.next = oddHead.next;
+        //  odd.next = null;
+        //  return evenHead.next;
+        even.next = null;
+         odd.next = evenHead.next;
+         return oddHead.next;
+    }
     
     public static void main(String[] satish) {
-        head = new Node(15);
-        head.next = new Node(20);
-        head.next.next = new Node(25);
-        head.next.next.next = new Node(30);
-        head.next.next.next.next = new Node(35);
-        head.next.next.next.next.next = new Node(45);
-        head.next.next.next.next.next.next = new Node(66);
+        head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = new Node(5);
+        head.next.next.next.next.next = new Node(6);
+        //head.next.next.next.next.next.next = new Node(66);
         //head.next.next.next.next.next.next.next = head.next.next.next;
         //printLL();
         //isCyclic();
         //removeLoop();
-        printLL();
+        // printLL();
         //removeLoop();
         // addFirst(3243);
         // printLL();
@@ -233,7 +263,10 @@ public class LinkedList {
         // int n = 1;
         // deleteNFromLast(n);
         // printLL();
-        reverseLinkedList();
-        printLL();
+        // reverseLinkedList();
+        // printLL();
+        // head = evenOddSegregate();
+        // printLL();
+        
     }
 }
