@@ -13,6 +13,7 @@
 // 13) Delete nth element from  Last in Linked list
 // 14) Reverse a linked list
 // 15)  Even and odd segregation in linkedlist
+//16) Dutch national flag sortnumber(3) in linked list
 
 public class LinkedList {
     static class Node { 
@@ -231,14 +232,55 @@ public class LinkedList {
          odd.next = evenHead.next;
          return oddHead.next;
     }
+
+
+    //16) Dutch national flag sortnumber(3) in linked list
+    public static Node sortColors(){
+        Node zeroHead = new Node(0);
+        Node oneHead = new Node(0);
+        Node twoHead = new Node(0);
+        Node zero = zeroHead, one = oneHead, two =twoHead;
+        Node temp = head;
+         while(temp!=null){
+            if(temp.data == 0){
+               zero.next = temp;
+               zero = zero.next;
+               temp=temp.next;
+               zero.next=null;
+            }
+            else if(temp.data==1){
+                one.next = temp;
+                one = one.next;
+                temp=temp.next;
+                one.next=null;
+            }
+            else{
+                two.next = temp;
+                two = two.next;
+                temp=temp.next;
+                two.next=null;
+            }
+            temp = temp.next;
+         }
+         two.next = null;
+         if(oneHead.next == null){
+            zero.next = twoHead.next;
+         }
+         else{
+            zero.next = oneHead.next;
+         }
+         one.next = twoHead.next;
+         return zeroHead.next;
+    }
+    
     
     public static void main(String[] satish) {
         head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next = new Node(5);
-        head.next.next.next.next.next = new Node(6);
+        head.next = new Node(0);
+        head.next.next = new Node(1);
+        head.next.next.next = new Node(2);
+        head.next.next.next.next = new Node(2);
+        head.next.next.next.next.next = new Node(0);
         //head.next.next.next.next.next.next = new Node(66);
         //head.next.next.next.next.next.next.next = head.next.next.next;
         //printLL();
@@ -266,7 +308,9 @@ public class LinkedList {
         // reverseLinkedList();
         // printLL();
         // head = evenOddSegregate();
-        // printLL();
-        
+        printLL();
+        sortColors();
+        printLL();
+
     }
 }
