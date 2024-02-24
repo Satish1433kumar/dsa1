@@ -83,8 +83,7 @@ public class Arrays {
     for(int i = 0;i<a.length;i++){
         for(int j=i+1;j<a.length;j++){
             if(a[i]==a[j]){
-                System.out.print(a[j]);
-                
+                System.out.print(a[j]); 
             }
         }
     }
@@ -463,7 +462,8 @@ public class Arrays {
     //   }
     //4)duplicateElements(d);
     //removeDuplicateElements(d);
-    // int a[] = {-1,-2,4,-1,-2,1,5,-3};
+//    int a[] = {-1,-2,-4,-1,-2,-1,-5,-3};
+//    kadanesAlgorithm(a);
     // int maxSum=kadanesAlgorithm(a);
     // System.out.println("Max Sum of given array is "+maxSum);
     //sc.close();

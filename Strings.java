@@ -1,4 +1,5 @@
 // 1) Write a java program to display all positions of substring in a given main String
+// 2)  Write a java program to reverse a given string 
 
 
 
@@ -26,9 +27,18 @@ public class Strings {
         System.out.println("The number of occurrences: " + c);
     }
 
+    // 2)  Write a java program to reverse a given string 
+    public static void reverseString(String str){
+        for(int i = str.length()-1;i>=0;i--){
+            System.out.print(str.charAt(i));
+        }
+    }
+
     public static void main(String[] args) {
-        String s1 = "abcabcabcaaa";
-        String s2 = "abc";
-        Strings.subString(s1, s2);
+        // String s1 = "abcabcabcaaa";
+        // String s2 = "abc";
+        String s1 = "Satish";
+        //Strings.subString(s1, s2);
+        Strings.reverseString(s1);
     }
 }
