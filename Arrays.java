@@ -21,7 +21,7 @@
 // 21) Java Program to find the frequency of odd & even numbers in the given matrix
 // 22) Maximum Sum Sub Array (Kadane's Algorithm) -------
 // 23) Dutch National Flag Algorithm ---------
-// 24) Boyer Moore Algorithm(Majority Element)----------
+// 24) Boyer Moore Algorithm(Majority Element) ----------
 // 25) two Sum problem 
 
 
@@ -30,7 +30,7 @@
 
 import java.util.HashMap;
 
-public class Arrays {
+public class Arrays { 
     //1)Java Program to copy all elements of one array into another array
     public static int[] copyArray(int a[]){
         int[] b =new int[a.length];
