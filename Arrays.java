@@ -285,9 +285,7 @@ public class Arrays {
                         a[i]=-1;
                     }
                 }
-                
                
-                
                 }
                 for(int j:a){
                     if(j!=-1){
