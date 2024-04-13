@@ -343,7 +343,7 @@ public class Arrays {
                     mid++;
                 }
                 else if(a[mid]==1){
-                    mid++;                       // why ? 
+                    mid++;                       // why ?
                 }
                 else{
                     int temp = a[mid];
