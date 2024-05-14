@@ -57,6 +57,7 @@ public class Arrays {
                 VisitedArray[i]=count;
             }
         }
+        System.out.println();
         for(int i = 0;i<VisitedArray.length;i++){
             if(VisitedArray[i]!=visited){
                 System.out.println("The number "+a[i]+" appears :"+VisitedArray[i]);
