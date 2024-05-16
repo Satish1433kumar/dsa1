@@ -1,5 +1,11 @@
+//1)
+
+
+
+
+
 public class Basic{
-    public static void reverse(int n){ 
+    public  static void reverse(int n){ 
         int r, rev = 0, temp;
         temp = n;
         while(n > 0){
@@ -17,6 +23,9 @@ public class Basic{
     }
 
     public static void main(String[] args){
+        // Basic b = new Basic();
+        // int num = 12345;
+        // b.reverse(num);
         int n = 1221;
         reverse(n);
     }
